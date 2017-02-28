@@ -1,0 +1,53 @@
+.deal {
+	display: block;
+	background: #62db78;
+	padding: 30px 10px;
+	border-radius: 10px;
+	line-height: 1;
+}
+
+.deal span {
+	font-size: 16px;
+	color: #fff;
+
+}
+
+.block-panel {
+
+}
+
+.block-panel .hd {
+	background: #ff8604;
+	padding: 10px;
+	color: #fff;
+	text-align: center;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	font-weight: 900;
+
+}
+
+.block-panel .bd {
+	padding: 0 10px;
+	border-left: 1px solid #32abdf;
+	border-bottom: 1px solid #32abdf;
+	border-right: 1px solid #32abdf;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.block-panel .bc-item-head {
+	color: #686868;
+}
+
+.sure {
+	background: #62db78;
+	color: #fff;
+	border-color: #62db78;
+}
+
+.show-qr {
+	color: #70aa66;
+	text-align: center;
+	font-size: 20px;
+}

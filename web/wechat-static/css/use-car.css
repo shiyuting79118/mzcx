@@ -1,0 +1,266 @@
+.choice-list {
+	border: 1px solid #eee;
+	border-radius: 6px;
+}
+
+.choice-list li {
+	display: table;
+	width: 100%;
+	position: relative;
+}
+
+.choice-list li:first-child {
+	border-bottom: 1px solid #eee;
+}
+
+.choice-list li:last-child {
+	border-bottom: 0;
+}
+
+.choice-list li .field {
+	display: table-cell;
+	width: 5em;
+	white-space: nowrap;
+	border-right: 1px solid #eee;
+	padding: 10px;
+
+}
+
+.choice-list li .con {
+	display: table-cell;
+	width: 100%;
+	padding: 10px;
+	color: #858e98;
+}
+
+.choice-list li i.i-arrow {
+	display: block;
+	border-top: 2px solid transparent;
+	border-left: 2px solid transparent;
+	border-bottom: 2px solid #aaa;
+	border-right: 2px solid #aaa;
+	transform: rotate(45deg);
+	position: absolute;
+	top: 50%;
+	margin-top: -4px;
+	right: 10px;
+}
+
+.choice-list li i.i-circle {
+	display: block;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: #eee;
+	position: absolute;
+	top: 50%;
+	margin-top: -2px;
+	right: 10px;
+}
+
+.choice-list li i.i-circle-on {
+	display: block;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: #ff5b41;
+	position: absolute;
+	top: 50%;
+	margin-top: -2px;
+	right: 10px;
+}
+
+.tab-head {
+	margin-top: 20px;
+}
+
+.tab-head li {
+	padding-top: 25px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: auto 20px;
+	text-align: center;
+	position: relative;
+	margin-bottom: 15px;
+}
+
+.tab-head li.active {
+	color: #ff5b41;
+}
+
+.tab-head li.active:after {
+	position: absolute;
+	left: 50%;
+	top: 49px;
+	content: '';
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-left: -12px;
+	transform: rotate(-135deg);
+	border-bottom: 1px solid #eee;
+	border-right: 1px solid #eee;
+	background: #fff;
+}
+
+.tab-head li.a {
+	background-image: url("../img/select-car1.png");
+}
+
+.tab-head li.a.active {
+	background-image: url("../img/select-car1-on.png");
+}
+
+.tab-head li.b {
+	background-image: url("../img/select-car2.png");
+}
+
+.tab-head li.b.active {
+	background-image: url("../img/select-car2-on.png");
+}
+
+.tab-head li.c {
+	background-image: url("../img/select-car3.png");
+}
+
+.tab-head li.c.active {
+	background-image: url("../img/select-car3-on.png");
+}
+
+.tab-head li.d {
+	background-image: url("../img/select-car4.png");
+}
+
+.tab-head li.d.active {
+	background-image: url("../img/select-car4-on.png");
+}
+
+.tab-head li.e {
+	background-image: url("../img/select-car5.png");
+}
+
+.tab-head li.e.active {
+	background-image: url("../img/select-car5-on.png");
+}
+
+.tab-body {
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	/*border: 1px solid #eee;*/
+	margin-bottom: 20px;
+
+}
+
+.tab-item {
+	display: none;
+}
+
+.tab-item.active {
+	display: block;
+}
+
+.tab-item .row:first-child {
+	border-bottom: 1px solid #eee;
+}
+
+.tab-item .big {
+	font-size: 18px;
+	color: #ff5b41;
+}
+
+.tab-item .row {
+	display: table;
+	width: 100%;
+	padding: 10px;
+	height: 50px;
+	text-align: center;
+}
+
+.tab-item .cell:first-child {
+	border-right: 1px solid #eee;
+}
+
+.tab-item .cell {
+	display: table-cell;
+	width: 50%;
+	vertical-align: middle;
+}
+
+.footer-panel {
+	border-top: 1px solid #dcdcdc;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .2);
+	z-index: 100;
+}
+
+.footer-panel .block-content {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+	background: #fff;
+}
+
+.footer-panel table {
+	width: 100%;
+	border-spacing: 0;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.footer-panel table th,
+.footer-panel table td {
+	text-align: center;
+	padding: 3px;
+}
+
+.footer-panel table th {
+	border-left: 1px solid #eee;
+	padding: 5px;
+	width: 33.33%;
+}
+
+.footer-panel table th:first-child {
+	border-left: 0;
+}
+
+.footer-panel table td {
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+.footer-panel table td:last-child {
+	border-right: 1px solid #eee;
+}
+
+.footer-panel table th {
+	background: #ff5b41;
+	color: #fff;
+}
+
+.footer-panel table th:last-child {
+	border-right-color: #eee;
+}
+
+.footer-panel table tr td:nth-child(1) {
+	font-weight: 900;
+	color: #333;
+}
+
+.footer-panel table tr td:nth-child(3) {
+	font-size: 10px;
+}
+
+.footer-panel table tr:last-child td:first-child {
+	border-bottom-left-radius: 4px;
+}
+
+.footer-panel table tr:last-child td:last-child {
+	border-bottom-right-radius: 4px;
+}
+

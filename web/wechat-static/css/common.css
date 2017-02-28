@@ -1,0 +1,139 @@
+body {
+	font-size: 12px;
+}
+
+.bc-list {
+	font-size: inherit;
+}
+
+.bc-header {
+	background: #fff;
+	/*border-bottom: 1px solid #DCDCDC;*/
+	box-shadow: 0 1px #dcdcdc;
+}
+
+.bc-header .bc-header-title {
+	color: #000;
+}
+
+.bc-btn {
+	font-weight: 900;
+}
+
+.bc-btn-sm {
+	font-size: 10px;
+}
+
+.text-muted {
+	color: #858e98;
+}
+
+::-moz-placeholder {
+	color: #b8c4cf;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #b8c4cf;
+}
+
+::-webkit-input-placeholder {
+	color: #b8c4cf;
+}
+
+.banner .account {
+
+}
+
+.strong {
+	font-weight: 900;
+}
+
+.common-alert {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, .2);
+	display: none;
+
+	width: 100%;
+	height: 100%;
+}
+
+.common-alert.active {
+	display: table;
+}
+
+.common-alert .container {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 10px;
+	text-align: center;
+}
+
+.common-alert .cute-container .block-content {
+	background: #fff;
+	display: inline-block;
+	border-radius: 3px;
+
+}
+
+.common-alert .cute-container .hd {
+	padding: 15px;
+	border-bottom: 1px solid #dcdcdc;
+	position: relative;
+}
+
+.common-alert .cute-container .hd h1 {
+	font-size: 16px;
+	text-align: center;
+	margin: 0;
+	font-weight: 400;
+}
+
+.common-alert .cute-container .close {
+	color: #ff5b41;
+	float: right;
+	padding: 10px;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	margin-top: -28px;
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.common-alert .cute-container .bd {
+	padding: 20px;
+	text-align: left;
+	font-size: 12px;
+}
+
+.common-alert .cute-container h4 {
+	margin-top: 0;
+}
+
+.common-alert .tip-container {
+	vertical-align: top;
+}
+
+.common-alert .tip-container .block-content {
+	margin: 50px 20px;
+	background: #ff5b41;
+	border-radius: 6px;
+	color: #fff;
+	font-size: 12px;
+	padding: 10px 10px;
+}
+
+.close {
+	color: #ff5b41;
+	padding: 10px;
+	position: relative;
+	top: -3px;
+	font-size: 20px;
+	font-weight: 900;
+}

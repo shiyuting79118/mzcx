@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/basic-ui.css"/>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css"/>
+    <script src="../jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="bc-header">
+    <a class="bc-header-action" href="demo.html"><i class="fa fa-chevron-left"></i></a>
+    <div class="bc-header-title">五星评价.html</div>
+</div>
+<div class="bc-margin">
+
+    <p>1.发货速度</p>
+    <div class="bc-star-bar">
+        <ul>
+            <li>
+                <div class="bc-star"></div>
+            </li>
+            <li>
+                <div class="bc-star"></div>
+            </li>
+            <li>
+                <div class="bc-star"></div>
+            </li>
+            <li>
+                <div class="bc-star"></div>
+            </li>
+            <li>
+                <div class="bc-star"></div>
+            </li>
+        </ul>
+        <input type="hidden" name="comment1" value="0"/>
+    </div>
+
+
+    <p>1.发货速度</p>
+    <div class="bc-star-bar">
+        <ul>
+            <li>
+                <div class="bc-star"></div>
+            </li>
+            <li>
+                <div class="bc-star"></div>
+            </li>
+            <li>
+                <div class="bc-star"></div>
+            </li>
+            <li>
+                <div class="bc-star"></div>
+            </li>
+            <li>
+                <div class="bc-star"></div>
+            </li>
+        </ul>
+        <input type="hidden" name="comment2" value="0"/>
+    </div>
+
+
+</div>
+<div class="bc-margin">
+    <p>我的评价:</p>
+    <textarea class="form-control" name="" id="" cols="30" rows="3"></textarea>
+</div>
+<div class="bc-margin">
+    <button type="submit" class="bc-btn bc-btn-danger bc-btn-block">提交</button>
+</div>
+
+<script>
+    //绑定点击事件
+    $(document).on("click", ".bc-star-bar li", function () {
+        var index = $(this).index() + 1;
+        var $element = $(this).closest(".bc-star-bar");
+        var $input = $element.find("input")[0];
+
+        if ($input.readOnly == true) {
+            return;
+        }
+        $input.value = index;
+        $element.find("li").removeClass("active");
+        $element.find("li:lt(" + index + ")").addClass("active");
+    });
+</script>
+</body>
+</html>

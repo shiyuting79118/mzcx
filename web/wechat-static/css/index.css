@@ -1,0 +1,51 @@
+#header {
+	background: #595d5b;
+	padding: 15px;
+	color: #fff;
+	line-height: 20px;
+	overflow: hidden;
+}
+
+#header .logo {
+	height: 20px;
+}
+
+#header .user {
+	float: right;
+}
+
+#header .user img {
+	height: 20px;
+}
+
+.swiper-container .dots .dot.active {
+	background-color: #fff;
+	background-position: 0 0;
+}
+
+.swiper-container .dots .dot {
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	margin: 3px;
+	background-image: url("../img/dot.png");
+	background-repeat: no-repeat;
+	background-size: 18px 6px;
+	background-position: -12px 0;
+}
+
+.nav-button {
+	margin: 20px 0;
+}
+
+.nav-button a {
+	display: block;
+}
+
+.nav-button img {
+	display: block;
+	margin: 0 auto;
+	width: 60px;
+	margin-bottom: 5px;
+}

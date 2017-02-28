@@ -1,0 +1,200 @@
+.#{$css-prefix}list-head {
+  padding: 10px $padding-base-horizontal 5px;
+  color: $text-muted;
+  line-height: 1.4;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 14px;
+  background: #f0f0f0;
+}
+
+.#{$css-prefix}list {
+  background-color: #fff;
+  font-size: $font-size-base;
+
+  .#{$css-prefix}item {
+    display: block;
+    padding: 10px 15px;
+    position: relative;
+    min-height: 44px;
+    margin: 0;
+    color: inherit;
+  }
+
+  .#{$css-prefix}item-flex {
+    padding: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    .#{$css-prefix}item-body {
+      display: block;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
+    .#{$css-prefix}item-body {
+      padding: 10px;
+    }
+
+    .#{$css-prefix}item-body:first-child {
+      padding-left: 15px;
+    }
+    .#{$css-prefix}item-body:last-child {
+      padding-right: 15px;
+    }
+    .#{$css-prefix}item-head {
+      padding-left: 15px;
+      //padding-right: 5px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    .#{$css-prefix}item-foot {
+      padding-right: 15px;
+      //padding-left: 5px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .#{$css-prefix}item:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: auto;
+    height: 1px;
+    //width: 100%;
+    background-color: $border-color-base;
+    display: block;
+    z-index: 15;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: scaleY(.3);
+    transform: scaleY(.3);
+  }
+
+  .#{$css-prefix}item-input {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    -webkit-appearance: none; /*for chrome*/
+    appearance: none; /*for chrome*/
+    outline: 0;
+    resize: none;
+    line-height: $line-height-base;
+    //line-height: normal;
+    font-size: inherit;
+    font-weight: 400;
+    //background: red;
+    border-radius: 0;
+    //padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+  .#{$css-prefix}item-arrow-down {
+    //padding-right: 10px !important;
+    background-image: url("../img/arrow.png");
+    background-position: center right;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+  }
+
+  &.#{$css-prefix}list-left {
+    .#{$css-prefix}item:after {
+      left: 15px;
+    }
+  }
+
+  &.#{$css-prefix}list-right {
+    .#{$css-prefix}item:after {
+      right: 15px;
+    }
+  }
+
+  &.#{$css-prefix}list-both {
+    .#{$css-prefix}item:after {
+      left: 15px;
+      right: 15px;
+    }
+  }
+
+  &.#{$css-prefix}list-station {
+    .item:last-child:after {
+      display: none;
+    }
+  }
+
+  &.#{$css-prefix}list-border-0 {
+    .#{$css-prefix}item:after {
+      display: none;
+    }
+  }
+  .#{$css-prefix}item.#{$css-prefix}border-0:after {
+    display: none;
+  }
+
+  &.#{$css-prefix}list-insert {
+    border-radius: 2px;
+    border: 1px solid $border-color-base;
+  }
+  &.#{$css-prefix}list-insert .#{$css-prefix}item:last-child:after {
+    display: none;
+  }
+
+  //> .#{$css-prefix}item > .#{$css-prefix}item-table,
+  //> .#{$css-prefix}item-table {
+  //  display: table;
+  //  width: 100%;
+  //  padding: 0;
+  //}
+  //
+  //.#{$css-prefix}item-table > .#{$css-prefix}item-head,
+  //.#{$css-prefix}item-table > .#{$css-prefix}item-foot,
+  //.#{$css-prefix}item-table > .#{$css-prefix}item-body {
+  //  display: table-cell;
+  //  padding-top: 12px;
+  //  padding-bottom: 12px;
+  //  padding-left: 15px;
+  //  vertical-align: middle;
+  //}
+  //
+  //.#{$css-prefix}item-table > .item-foot,
+  //.#{$css-prefix}item-table > .item-body:last-child {
+  //  padding-right: 15px;
+  //}
+  //
+  //.#{$css-prefix}item-table > .#{$css-prefix}item-head,
+  //.#{$css-prefix}item-table > .#{$css-prefix}item-foot {
+  //  white-space: nowrap;
+  //  width: 1%;
+  //}
+  //
+  //.#{$css-prefix}item-table > .#{$css-prefix}item-body {
+  //  width: 100%;
+  //}
+  //
+  //.#{$css-prefix}item-table > .#{$css-prefix}item-input {
+  //  border: 0;
+  //  background: transparent;
+  //  -webkit-appearance: none; /*for chrome*/
+  //  outline: 0;
+  //  resize: none;
+  //  line-height: $line-height-base;
+  //}
+
+}
+
+.#{$css-prefix}has-touch:active {
+  background-color: #f0f0f0;
+}

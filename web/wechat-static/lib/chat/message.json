@@ -1,0 +1,37 @@
+{
+  "status": "true",
+  "data": [
+    {
+      "id": "1001",
+      "content": "消息",
+      "type": "1",
+      "avatar": "http://pic31.nipic.com/20130708/9422601_100830087000_2.jpg",
+      "time": "2015-12-23 12:34",
+      "from": "1"
+    },
+    {
+      "id": "1001",
+      "content": "消息",
+      "type": "1",
+      "avatar": "http://img2.imgtn.bdimg.com/it/u=3791371496,3675101188&fm=11&gp=0.jpg",
+      "time": "2015-12-23 12:34",
+      "from": "2"
+    },
+    {
+      "id": "1001",
+      "content": "消息",
+      "type": "1",
+      "avatar": "http://pic31.nipic.com/20130708/9422601_100830087000_2.jpg",
+      "time": "2015-12-23 12:34",
+      "from": "1"
+    },
+    {
+      "id": "1001",
+      "content": "消息",
+      "type": "1",
+      "avatar": "http://img2.imgtn.bdimg.com/it/u=3791371496,3675101188&fm=11&gp=0.jpg",
+      "time": "2015-12-23 12:34",
+      "from": "2"
+    }
+  ]
+}

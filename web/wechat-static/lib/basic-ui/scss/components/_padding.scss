@@ -1,0 +1,40 @@
+//内边距
+.#{$css-prefix}padding {
+  padding: $padding-base-horizontal $padding-base-vertical;
+}
+
+.#{$css-prefix}padding-left {
+  padding-left: $padding-base-horizontal;
+}
+
+.#{$css-prefix}padding-right {
+  padding-right: $padding-base-horizontal;
+}
+
+.#{$css-prefix}padding-top {
+  padding-top: $padding-base-vertical;
+}
+
+.#{$css-prefix}padding-bottom {
+  padding-bottom: $padding-base-vertical;
+}
+
+.#{$css-prefix}padding-0 {
+  padding: 0 !important;
+}
+
+.#{$css-prefix}padding-left-0 {
+  padding-left: 0 !important;
+}
+
+.#{$css-prefix}padding-right-0 {
+  padding-right: 0 !important;
+}
+
+.#{$css-prefix}padding-top-0 {
+  padding-top: 0 !important;
+}
+
+.#{$css-prefix}padding-bottom-0 {
+  padding-bottom: 0 !important;
+}

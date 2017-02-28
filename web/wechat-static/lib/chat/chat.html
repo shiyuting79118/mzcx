@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="chat.css"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+
+</head>
+<body>
+
+<script src="../jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="../pullbox/pull-refresh.css"/>
+<script src="../pullbox/pull-refresh.js"></script>
+<div class="chat-line-wrapper">
+    <div class="pull-refresh"></div>
+    <div class=""></div>
+    <ul class="chat-line">
+
+    </ul>
+</div>
+
+<div style="height: 60px"></div>
+<div class="send-bar">
+    <div class="input-wrap"><input id="textEditor" type="text"/></div>
+    <button class="js-send btn btn-primary ">发送</button>
+</div>
+
+<script id="message-tpl" type="text/html">
+    <li class="role">
+        <div class="avatar">
+
+        </div>
+        <div class="body">
+            <div class="content">内容内容内容内容内容</div>
+        </div>
+    </li>
+</script>
+
+<script>
+
+    var pullDownHandle = null;
+
+    var chatService = {
+        init: function () {
+
+        },
+        history: function () {
+            $.ajax({
+                type: "POST",
+                url: "message.json",
+                data: {
+                    "maxid": 1001
+                },
+                dataType: "json",
+                success: function (response) {
+                    for (var i = 0; i < response.data.length; i++) {
+                        $(".chat-line").append(chatService.createDom(response.data[i]));
+                    }
+                },
+                error: function (response) {
+                    $(document).trigger("ajax-error", response);
+                },
+                complete: function (response) {
+                    pullDownHandle && pullDownHandle.finish();
+                }
+            });
+
+        },
+        receive: function () {
+        },
+        send: function () {
+        },
+        createDom: function (data) {
+            var $dom = $($("#message-tpl").text());
+
+            if (data.from == 1) {
+                $dom.addClass("you");
+            }
+            if (data.from == 2) {
+                $dom.addClass("me");
+            }
+            $dom.find(".avatar").css("background-image", "url(" + data.avatar + ")");
+            $dom.find(".time").html(data.time);
+            $dom.find(".content").html(data.content);
+            return $dom;
+        }
+    };
+
+
+    chatService.history();
+
+    pullbox({
+        boxSelector: ".chat-line-wrapper",
+        onReFresh: function (handle) {
+            pullDownHandle = handle;
+            chatService.history();
+        }
+    });
+
+
+</script>
+</body>
+</html>

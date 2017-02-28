@@ -1,0 +1,48 @@
+
+input[type=checkbox].#{$css-prefix}checkbox-slide {
+  /*margin-top: 17px;*/
+  position: relative;
+  width: 54px;
+  height: 28px;
+  border-radius: 14px;
+  /*-webkit-box-shadow: 0 0 0 1px #b2b2b2 inset, 0 1px 0 1px #fff;*/
+  background: #c7c7c7;
+  -webkit-appearance: none;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+
+  vertical-align: middle;
+  margin-top: -2px;
+  margin-bottom: 1px;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    /*-webkit-box-shadow: 0 1px 0 1px #b2b2b2;*/
+    background: #fff;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+  }
+  &:checked {
+    background: $brand-success;
+  }
+  &:checked:after {
+    left: 28px;
+  }
+}

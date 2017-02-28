@@ -1,0 +1,52 @@
+hr {
+  border: 0;
+  margin: 10px 0;
+  height: 0;
+  border-top: 1px solid $border-color-base;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  -ms-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.hr-5 {
+  height: 5px;
+}
+
+.hr-10 {
+  height: 10px;
+}
+
+.hr-15 {
+  height: 15px;
+}
+
+.hr-20 {
+  height: 20px;
+}
+
+.hr-25 {
+  height: 25px;
+}
+
+.hr-30 {
+  height: 30px;
+}
+
+.hr-35 {
+  height: 35px;
+}
+
+.hr-40 {
+  height: 40px;
+}
+
+.hr-45 {
+  height: 45px;
+}
+
+.hr-50 {
+  height: 50px;
+}

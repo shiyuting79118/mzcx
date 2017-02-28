@@ -1,0 +1,56 @@
+
+.#{$css-prefix}margin-sm {
+  margin: $margin-sm;
+}
+
+//外边距
+.#{$css-prefix}margin {
+  margin: $padding-base-horizontal $padding-base-vertical;
+}
+
+.#{$css-prefix}margin-left {
+  margin-left: $padding-base-horizontal ;
+}
+
+.#{$css-prefix}margin-right {
+  margin-right: $padding-base-horizontal ;
+}
+
+.#{$css-prefix}margin-top {
+  margin-top:  $padding-base-vertical;
+}
+
+.#{$css-prefix}margin-bottom {
+  margin-bottom:  $padding-base-vertical;
+}
+
+//
+//.#{$css-prefix}margin-horizontal {
+//  margin-left: $padding-base-horizontal;
+//  margin-right: $padding-base-horizontal;
+//}
+//
+//.#{$css-prefix}margin-vertical {
+//  margin-top: $padding-base-horizontal;
+//  margin-bottom: $padding-base-horizontal;
+//}
+
+.#{$css-prefix}margin-0 {
+  margin: 0 !important;
+}
+
+.#{$css-prefix}margin-top-0 {
+  margin-top: 0 !important;
+}
+
+.#{$css-prefix}margin-bottom-0 {
+  margin-bottom: 0 !important;
+}
+
+.#{$css-prefix}margin-left-0 {
+  margin-left: 0 !important;
+}
+
+.#{$css-prefix}margin-right-0 {
+  margin-right: 0 !important;
+}

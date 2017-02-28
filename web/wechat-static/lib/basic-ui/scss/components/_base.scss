@@ -1,0 +1,90 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  //ios bug
+  //overflow-x: hidden;
+}
+
+//html,body{
+//  background-color: #efeff4;;
+//}
+body {
+  //  font-family: $font-family-base;
+  //  font-weight: 400;
+  //  line-height: $line-height-base;
+  //  font-size: $font-size-base;
+  //  color: $text-color;
+  word-break: break-all;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  //  -webkit-tap-highlight-color: rgba(250, 250, 250, 0);
+  -webkit-overflow-scrolling: touch;
+  word-wrap: break-word;
+  //  line-height: normal;
+  //  font:14px/150% "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  color: $text-color;
+
+  font-weight: 400;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+a[href] {
+  cursor: pointer;
+
+}
+
+a,
+a:hover,
+a:link,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
+  outline: 0;
+
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+label {
+  margin: 0;
+  font-weight: normal;
+}
+
+//
+//[class^="icon-"], [class*=" icon-"] {
+//  vertical-align: middle;
+//}
+//fastclick bug
+//label > * { pointer-events: none; }
+
+[hidden] {
+  display: none;
+}

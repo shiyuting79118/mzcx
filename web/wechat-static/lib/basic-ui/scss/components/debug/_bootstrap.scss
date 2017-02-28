@@ -1,0 +1,11 @@
+.form-control {
+  box-shadow: none;
+  border-radius: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 40px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}

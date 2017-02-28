@@ -1,0 +1,32 @@
+// Mixins
+// --------------------------------------------------
+// Utilities
+@import "mixins/opacity";
+@import "mixins/image";
+@import "mixins/labels";
+@import "mixins/size";
+@import "mixins/text-emphasis";
+@import "mixins/text-overflow";
+@import "mixins/vendor-prefixes";
+// Components
+@import "mixins/buttons";
+// Skins
+@import "mixins/background-variant";
+@import "mixins/border-radius";
+@import "mixins/gradients";
+// Layout
+@import "mixins/clearfix";
+@import "mixins/center-block";
+
+/*
+@mixin box() {
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+}
+
+@mixin flex($num) {
+  -moz-box-flex: #{$num};
+  -webkit-box-flex: #{$num};
+  box-flex: #{$num};
+}*/

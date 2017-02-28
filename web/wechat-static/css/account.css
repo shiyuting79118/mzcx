@@ -1,0 +1,49 @@
+.banner {
+	background: #ff3626;
+	height: 140px;
+	padding: 30px;
+	color: #fff;
+	position: relative;
+}
+
+.banner .edit {
+	padding: 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.banner .edit img {
+	height: 12px;
+}
+
+.banner .edit img,
+.banner .edit span {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+.banner .info {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 10px;
+}
+
+.banner .thumb {
+	display: block;
+	width: 50px;
+	margin: 0 auto;
+}
+
+.banner .reg {
+	width: 100px;
+	display: block;
+	margin: 10px auto;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	text-align: center;
+	color: inherit;
+}

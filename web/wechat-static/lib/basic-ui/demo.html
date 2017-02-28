@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/basic-ui.css"/>
+    <!--<link rel="stylesheet" href="css/bg-gray.css"/>-->
+</head>
+<body>
+<script src="../jquery/dist/jquery.min.js"></script>
+<header class="bc-header">
+    <a href="" class="bc-header-action"><i class="fa fa-bars"></i></a>
+    <div class="bc-header-title">WebApp UI</div>
+    <a href="" class="bc-header-action">
+        <i class="fa fa-search"></i>
+    </a>
+</header>
+<ul class="bc-nav-bar">
+    <li class="active"><a href="javascript:;">热门</a></li>
+    <li><a href="javascript:;">分类</a></li>
+    <li><a href="javascript:;">专题</a></li>
+    <li><a href="javascript:;">锁屏</a></li>
+</ul>
+<link rel="stylesheet" href="../swiper/css/swiper.min.css"/>
+<script src="../swiper/js/swiper.min.js"></script>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <a href="">
+                <img class="img-responsive" src="img/tmp/slide1.jpg" alt=""/>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="">
+                <img class="img-responsive" src="img/tmp/slide2.jpg" alt=""/>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="">
+                <img class="img-responsive" src="img/tmp/slide3.jpg" alt=""/>
+            </a>
+        </div>
+    </div>
+    <div class="dots"></div>
+</div>
+
+<!--轮播器-->
+<script type="text/javascript">
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: 3000,
+        pagination: '.dots',
+        bulletClass: "dot",
+        bulletActiveClass: "active"
+    });
+</script>
+<div class="bc-container">
+
+    <div class="bc-block-title">布局</div>
+    <div class="bc-margin">
+        <p><code>.bc-margin</code></p>
+        <p><code>.bc-margin-top</code></p>
+        <p><code>.bc-margin-right</code></p>
+        <p><code>.bc-margin-bottom</code></p>
+        <p><code>.bc-margin-left</code></p>
+        <p><code>.bc-margin-0</code></p>
+        <p><code>.bc-margin-top-0</code></p>
+        <p><code>.bc-margin-right-0</code></p>
+        <p><code>.bc-margin-bottom-0</code></p>
+        <p><code>.bc-margin-left-0</code></p>
+    </div>
+
+    <div class="bc-padding">
+        <p><code>.bc-padding</code></p>
+        <p><code>.bc-padding-top</code></p>
+        <p><code>.bc-padding-right</code></p>
+        <p><code>.bc-padding-bottom</code></p>
+        <p><code>.bc-padding-left</code></p>
+        <p><code>.bc-padding-0</code></p>
+        <p><code>.bc-padding-top-0</code></p>
+        <p><code>.bc-padding-right-0</code></p>
+        <p><code>.bc-padding-bottom-0</code></p>
+        <p><code>.bc-padding-left-0</code></p>
+    </div>
+    <div class="bc-block-title">平铺</div>
+    <p class="bc-margin"><code>.bc-tiled > li</code></p>
+    <style>
+        .bc-tiled .thumb {
+            width: 40px;
+            height: 40px;
+            margin: 10px auto;
+        }
+    </style>
+    <ul class="bc-tiled">
+        <li>
+            <div class="thumb bc-bg-cover" style="background-image: url(img/tmp/icon.png)"></div>
+        </li>
+        <li>
+            <div class="thumb bc-bg-cover" style="background-image: url(img/tmp/icon.png)"></div>
+        </li>
+        <li>
+            <div class="thumb bc-bg-cover" style="background-image: url(img/tmp/icon.png)"></div>
+        </li>
+    </ul>
+    <div class="bc-block-title">两端对齐</div>
+    <p class="bc-margin"><code>.bc-justify > li</code></p>
+    <style>
+        .bc-justify li {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+
+    <div class="bc-margin">
+        <ul class="bc-justify">
+            <li class="bc-bg-cover" style="background-image: url(img/tmp/icon.png)"></li>
+            <li class="bc-bg-cover" style="background-image: url(img/tmp/icon.png)"></li>
+            <li class="bc-bg-cover" style="background-image: url(img/tmp/icon.png)"></li>
+        </ul>
+    </div>
+    <div class="bc-block-title">九宫格</div>
+    <div class="bc-margin">
+        <p><code>.bc-grid-cells > li</code></p>
+    </div>
+    <ul class="bc-grid-cells">
+        <li>
+            <a href="">
+                <img class="bc-margin-bottom" height="26" src="img/tmp/icon.png" alt=""/>
+                <div>会员商城</div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img class="bc-margin-bottom" height="26" src="img/tmp/icon.png" alt=""/>
+                <div>会员商城</div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img class="bc-margin-bottom" height="26" src="img/tmp/icon.png" alt=""/>
+                <div>会员商城</div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img class="bc-margin-bottom" height="26" src="img/tmp/icon.png" alt=""/>
+                <div>会员商城</div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img class="bc-margin-bottom" height="26" src="img/tmp/icon.png" alt=""/>
+                <div>会员商城</div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div>
+                    <img class="bc-margin-bottom" height="26" src="img/tmp/icon.png" alt=""/>
+                </div>
+                <div>会员商城</div>
+            </a>
+        </li>
+    </ul>
+
+    <div class="bc-block-title">标签</div>
+    <div class="bc-padding">
+        <p><code>.bc-label.bc-label-primary</code></p>
+        <p><code>.bc-label.bc-label-default</code></p>
+        <p><code>.bc-label.bc-label-danger</code></p>
+        <p><code>.bc-label.bc-label-warning</code></p>
+        <p><code>.bc-label.bc-label-info</code></p>
+        <span class="bc-label bc-label-primary">标签</span>
+        <span class="bc-label bc-label-default">标签</span>
+        <span class="bc-label bc-label-danger">标签</span>
+        <span class="bc-label bc-label-warning">标签</span>
+        <span class="bc-label bc-label-info">标签</span>
+    </div>
+    <div class="bc-block-title">列表</div>
+    <div class="bc-margin">
+        <p>
+            <code>.bc-list > .bc-item</code>
+        </p>
+    </div>
+
+    <div class="bc-margin">
+        <ul class="bc-list bc-list-insert">
+            <li class="bc-item">列表</li>
+            <li class="bc-item">列表</li>
+            <li class="bc-item ">列表</li>
+        </ul>
+    </div>
+
+    <ul class="bc-list">
+        <li class="bc-item">列表</li>
+        <li class="bc-item">列表</li>
+        <li class="bc-item">列表</li>
+    </ul>
+
+    <div class="bc-block-title"></div>
+    <div class="bc-margin">
+        <p>
+            <code>.bc-item-input</code>
+        </p>
+    </div>
+    <div class="bc-list">
+        <label class="bc-item bc-item-flex">
+            <span class="bc-item-head">价格:</span>
+            <span class="bc-item-body"><input class="bc-item-input" type="text"/></span>
+            <span class="bc-item-foot">元</span>
+        </label>
+        <label class="bc-item bc-item-flex ">
+            <span class="bc-item-head">颜色:</span>
+            <span class="bc-item-body">
+                <select class="bc-item-input bc-item-arrow-down" name="" id="">
+                    <option value="红">红</option>
+                    <option value="绿">绿</option>
+                    <option value="蓝">蓝</option>
+                </select>
+            </span>
+        </label>
+        <div class="bc-item bc-item-flex" style="padding-top: 0;padding-bottom: 0">
+            <div class="bc-item-body"><input class="bc-item-input" type="text" placeholder="验证码"/></div>
+            <div class="bc-item-foot"><a href="javascript:;"><span class="blue">发送验证码</span></a></div>
+        </div>
+        <label class="bc-item bc-border-0">
+            <textarea class="bc-item-input" placeholder="备注" name="" rows="3"></textarea>
+        </label>
+    </div>
+    <div class="bc-block-title"></div>
+
+    <div class="bc-margin">
+        <p><code>.bc-item-flex</code></p>
+        <p class="text-indent"><code> .bc-item-head</code></p>
+        <p class="text-indent"><code> .bc-item-body</code></p>
+        <p class="text-indent"><code> .bc-item-foot</code></p>
+    </div>
+    <div class="bc-list bc-list-left">
+        <div class="bc-item bc-padding-0">
+            <div class="bc-item-flex">
+
+                <div class="bc-item-body">
+                    <p class="fs-18">土豆快跑</p>
+                    <div class="small">金牌用户</div>
+                </div>
+                <label class="bc-item-foot">
+                    <span class="bc-avatar bc-avatar-xs">
+                        <span style="background-color: #eee"></span>
+                    </span>
+                    <input type="file" style="display: none"/>
+                </label>
+            </div>
+        </div>
+        <a class="bc-item bc-item-flex bc-touch">
+            <div class="bc-item-head">
+                <span class="fs-20 text-primary"><i class="fa fa-weixin"></i></span>
+            </div>
+            <div class="bc-item-body">朋友圈</div>
+        </a>
+
+        <a class="bc-item bc-item-flex bc-touch">
+            <span class="bc-item-body">消息通知</span>
+            <span class="bc-item-foot"><small class="text-muted">公告、活动</small><span class="bc-icon bc-icon-link"></span></span>
+        </a>
+        <label class="bc-item bc-item-flex">
+            <span class="bc-item-body">开启保护</span>
+            <span class="bc-item-foot"><input class="bc-checkbox" type="checkbox"/></span>
+        </label>
+        <label class="bc-item bc-item-flex bc-border-0">
+            <span class="bc-item-body">加入用户体验计划</span>
+            <span class="bc-item-foot"><input class="bc-checkbox-slide" type="checkbox"/></span>
+        </label>
+    </div>
+
+    <div class="bc-block-title"></div>
+    <div class="bc-list bc-list-border-0">
+        <a href="javascript:;" class="bc-item  bc-item-flex bc-touch">
+            <div class="bc-item-head">
+                <div style="width: 80px;height: 60px;background-image: url(img/tmp/banner.jpg)"
+                     class="bc-bg-cover"></div>
+            </div>
+            <div class="bc-item-body">
+                <div class="text-overflow-2">苹果想靠印度市场翻身 那里是否仍是蓝海？</div>
+                <div class="small text-muted">2016-12-22</div>
+            </div>
+        </a>
+        <a href="javascript:;" class="bc-item  bc-item-flex bc-touch">
+            <div class="bc-item-head ">
+                <div style="width: 80px;height: 60px;background-image: url(img/tmp/banner.jpg)"
+                     class="bc-bg-cover"></div>
+            </div>
+            <div class="bc-item-body">
+                <div class="text-overflow-2">苹果想靠印度市场翻身 那里是否仍是蓝海？</div>
+                <div class="small text-muted">2016-12-22</div>
+            </div>
+        </a>
+    </div>
+    <div class="bc-block-title"></div>
+
+    <div class="bc-list">
+        <a href="javascript:;" class="bc-item bc-border-0 bc-touch">
+            <div style="width:100%;height: 150px;background-image: url(img/tmp/slide1.jpg)"
+                 class="bc-bg-muted bc-bg-cover"></div>
+            <div class="padding">
+                <div class="fs-16">资讯标题资讯标题资讯标题资讯</div>
+                <div class="small text-muted">2016-12-22</div>
+            </div>
+        </a>
+        <a href="javascript:;" class="bc-item bc-border-0 bc-touch">
+            <div style="width:100%;height: 150px;background-image: url(img/tmp/slide1.jpg)"
+                 class="bc-bg-muted bc-bg-cover"></div>
+            <div class="padding">
+                <div class="fs-16">资讯标题资讯标题资讯标题资讯</div>
+                <div class="small text-muted">2016-12-22</div>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="bc-loading"></div>
+    <div class="bc-system-tip"><span>全部加载完毕</span></div>
+
+    <div class="bc-margin">
+        <div class="bc-progress">
+            <div class="bc-item-bar" style="width: 30%;"></div>
+        </div>
+        <div class="bc-progress">
+            <div class="bc-progress-bar" style="width: 30%;"></div>
+            <div class="bc-progress-bar" style="background-color:orangered;width: 60%;"></div>
+        </div>
+        <div class="bc-progress">
+            <div class="bc-progress-bar bc-progress-bar-striped" style="width: 60%;"></div>
+        </div>
+    </div>
+
+    <div class="bc-block-title">商品累加器</div>
+    <div class="bc-margin">
+        <p><code>.bc-calc span input span</code></p>
+    <span class="bc-calc js-calc">
+        <span class="js-minus"><i class="fa fa-minus"></i></span>
+        <input type="tel" readonly value="1"/>
+        <span class="js-plus"><i class="fa fa-plus"></i></span>
+    </span>
+        <script>
+            $(function () {
+
+                var total = 3;
+
+                $(".js-calc .js-minus").click(function () {
+                    var $input = $(".js-calc input");
+                    var val = parseInt($input.val());
+                    var qty = Math.max(Math.min(total, 1), val - 1);
+                    $input.val(qty);
+                });
+                $(".js-calc .js-plus").click(function () {
+                    var $input = $(".js-calc input");
+                    var val = parseInt($input.val());
+                    var qty = Math.min(total, val + 1);
+                    $input.val(qty);
+                });
+            });
+        </script>
+    </div>
+
+    <div class="bc-margin">
+        <p><code>bc-btn bc-btn-primary bc-btn-block</code></p>
+        <button class="bc-btn bc-btn-default bc-btn-block" disabled>提交</button>
+        <button class="bc-btn bc-btn-default bc-btn-block">提交</button>
+
+        <button class="bc-btn bc-btn-primary bc-btn-block" disabled>提交</button>
+        <button class="bc-btn bc-btn-primary bc-btn-block">提交</button>
+
+        <button class="bc-btn bc-btn-danger bc-btn-block" disabled>提交</button>
+        <button class="bc-btn bc-btn-danger bc-btn-block">提交</button>
+
+        <button class="bc-btn bc-btn-primary-outline bc-btn-block" disabled>提交</button>
+        <button class="bc-btn bc-btn-primary-outline bc-btn-block">提交</button>
+
+        <button class="bc-btn bc-btn-danger-outline bc-btn-block" disabled>提交</button>
+        <button class="bc-btn bc-btn-danger-outline bc-btn-block">提交</button>
+    </div>
+    <div class="bc-margin ">
+        <ol class=" small">
+            <li>1.文字说明文字说明文</li>
+            <li>2.文字说明文字说</li>
+            <li>3.文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明</li>
+        </ol>
+    </div>
+    <div class="bc-block-title">商品列表</div>
+    <div class="bc-falls">
+        <div class="bc-falls-head">分类标题</div>
+        <ul>
+
+            <li class="bc-falls-item">
+                <a href="">
+                    <div class="bc-falls-thumb" style="background-color: #eee"></div>
+                    <div class="bc-falls-title"><span>商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</span></div>
+                    <div class="bc-falls-bottom">
+                        <span class="bc-falls-price">&yen;<span>123</span></span>
+                    </div>
+                </a>
+            </li>
+            <li class="bc-falls-item">
+                <a href="">
+                    <div class="bc-falls-thumb" style="background-color: #eee"></div>
+                    <div class="bc-falls-title"><span>商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</span></div>
+                    <div class="bc-falls-bottom">
+                        <span class="bc-falls-price">&yen;<span>123</span></span>
+                    </div>
+                </a>
+            </li>
+            <li class="bc-falls-item">
+                <a href="">
+                    <div class="bc-falls-thumb" style="background-color: #eee"></div>
+                    <div class="bc-falls-title"><span>商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</span></div>
+                    <div class="bc-falls-bottom">
+                        <span class="bc-falls-price">&yen;<span>123</span></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="bc-list-head">目录</div>
+    <div class="bc-list">
+        <a class="bc-item bc-item-flex" href="http://fontawesome.io/icons/">
+            <div class="bc-item-head"><i class="fa fa-database"></i></div>
+            <div class="bc-item-body">字体图标</div>
+            <div class="bc-item-foot text-muted"><span class="bc-reddot"></span><i class="bc-icon bc-icon-link"></i>
+            </div>
+        </a>
+        <a class="bc-item bc-item-flex" href="文章.html">
+            <div class="bc-item-body">文章</div>
+            <div class="bc-item-foot text-muted"><span class="bc-badge">2</span><i class="bc-icon bc-icon-link"></i>
+            </div>
+        </a>
+        <a class="bc-item bc-item-flex" href="../chat/chat.html">
+            <div class="bc-item-body">微信聊天样式</div>
+            <div class="bc-item-foot text-muted"><span class="bc-badge bc-badge-muted">32</span><i
+                    class="bc-icon bc-icon-link"></i>
+            </div>
+        </a>
+        <a class="bc-item bc-item-flex" href="消费记录列表.html">
+            <div class="bc-item-body">消费记录列表</div>
+            <div class="bc-item-foot text-muted"><i class="bc-icon bc-icon-link"></i>
+            </div>
+        </a>
+
+        <a class="bc-item bc-item-flex" href="操作成功.html">
+            <div class="bc-item-body">操作成功</div>
+            <div class="bc-item-foot text-muted"><i class="bc-icon bc-icon-link"></i></div>
+        </a>
+        <a class="bc-item bc-item-flex" href="操作失败.html">
+            <div class="bc-item-body">操作失败</div>
+            <div class="bc-item-foot text-muted"><i class="bc-icon bc-icon-link"></i></div>
+        </a>
+        <a class="bc-item bc-item-flex" href="角标.html">
+            <div class="bc-item-body">角标</div>
+            <div class="bc-item-foot text-muted"><i class="bc-icon bc-icon-link"></i></div>
+        </a>
+        <a class="bc-item bc-item-flex" href="五星评价.html">
+            <div class="bc-item-body">五星评价</div>
+            <div class="bc-item-foot text-muted"><i class="bc-icon bc-icon-link"></i></div>
+        </a>
+        <a class="bc-item bc-item-flex" href="../pullbox/index.html">
+            <div class="bc-item-body">下拉刷新 - 加载更多</div>
+            <div class="bc-item-foot text-muted"><i class="bc-icon bc-icon-link"></i></div>
+        </a>
+        <a class="bc-item bc-item-flex" href="ActionSheet.html">
+            <div class="bc-item-body">ActionSheet</div>
+            <div class="bc-item-foot text-muted"><i class="bc-icon bc-icon-link"></i></div>
+        </a>
+        <a class="bc-item bc-item-flex" href="animateDiv.html">
+            <div class="bc-item-body">DIV弹层动画</div>
+            <div class="bc-item-foot text-muted"><i class="bc-icon bc-icon-link"></i></div>
+        </a>
+    </div>
+
+
+    <!-- 回到顶部 -->
+    <div class="bc-scroll-to-top" onclick="window.scrollTo(0,0)"></div>
+</div>
+
+<div class="bc-footer-empty"></div>
+<div class="bc-footer">
+    <ul class="bc-footer-inner">
+        <li>
+            <a href="">导航</a>
+        </li>
+        <li>
+            <a href="">导航</a>
+        </li>
+        <li>
+            <a href="">导航</a>
+        </li>
+    </ul>
+</div>
+
+<script src="../jquery/dist/jquery.js"></script>
+<script src="js/basic-ui.js"></script>
+<script>
+    //回到顶部
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 300) {
+            $(".bc-scroll-to-top").fadeIn();
+        } else {
+            $(".bc-scroll-to-top").fadeOut();
+        }
+    });
+</script>
+</body>
+</html>

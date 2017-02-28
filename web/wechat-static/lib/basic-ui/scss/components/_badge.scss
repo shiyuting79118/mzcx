@@ -1,0 +1,20 @@
+.#{$css-prefix}badge{
+  display: inline-block;
+  text-align: center;
+  background: #f74c31;
+  color: #fff;
+  font-size: 11px;
+  height: 16px;
+  line-height: 16px;
+  -webkit-border-radius: 8px;
+  padding: 0 6px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  &:empty{
+    display: none;
+  }
+}
+
+.#{$css-prefix}badge-muted {
+  background: #b6cae0;
+}

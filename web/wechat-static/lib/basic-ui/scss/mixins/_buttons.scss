@@ -1,0 +1,30 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant($color, $background, $border) {
+  & {
+    color: $color !important;
+    outline: 0;
+  }
+
+  &:active,
+  //&:active:hover,
+  &.active {
+    color: $color;
+    background-color: darken($background, 2%);
+    border-color: darken($border, 12%);
+    box-shadow: none;
+  }
+
+  &,
+  &:hover,
+  &:focus,
+  &:visited {
+    color: $color;
+    background-color: $background;
+    border-color: darken($border, 2%);
+  }
+
+}

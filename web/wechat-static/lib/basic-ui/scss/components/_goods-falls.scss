@@ -1,0 +1,68 @@
+.#{$css-prefix}falls {
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 10px;
+  .#{$css-prefix}falls-head {
+    margin: 10px 5px 2px;
+    font-weight: 900;
+    line-height: 20px;
+    border-left: 3px solid #e53d40;
+    padding-left: 5px;
+  }
+  .#{$css-prefix}falls-item {
+    display: block;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 50%;
+    float: left;
+    position: relative;
+  }
+  .#{$css-prefix}falls-item:nth-child(2n+1) {
+    padding-right: 5px;
+    padding-left: 6px;
+  }
+  .#{$css-prefix}falls-item:nth-child(2n) {
+    padding-left: 5px;
+    padding-right: 6px;
+  }
+
+  .#{$css-prefix}falls-title {
+    height: 36px;
+    //border-bottom: solid 1px $border-color-base;
+    margin: 0 5px;
+    padding-top: 4px;
+  }
+  .#{$css-prefix}falls-thumb {
+    display: block;
+    position: relative;
+    padding-top: 100%;
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: center;
+    -wekit-background-size: cover;
+    background-size: cover;
+  }
+  .#{$css-prefix}falls-bottom {
+    margin: 0 5px;
+  }
+  .#{$css-prefix}falls-price {
+    font-size: 14px;
+    color: #f15353;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .#{$css-prefix}falls-title span {
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: 12px;
+    text-align: left;
+    height: 28px;
+    line-height: 14px;
+    color: #333;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}

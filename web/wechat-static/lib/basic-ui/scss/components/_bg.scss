@@ -1,0 +1,26 @@
+
+.bg-contain,
+.#{$css-prefix}bg-contain {
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.bg-cover,
+.#{$css-prefix}bg-cover {
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.bg-white,
+.#{$css-prefix}bg-white {
+  background-color: #fff;
+}
+
+.bg-muted,
+.#{$css-prefix}bg-muted {
+  background-color: #f0f0f0;
+}

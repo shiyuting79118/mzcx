@@ -1,0 +1,31 @@
+
+.#{$css-prefix}system-tip {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  span {
+    padding: 10px;
+    background: #e8e8e8;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1;
+    min-width: 200px;
+    color: #777;
+  }
+  //.#{$css-prefix}thumb {
+  //  display: block;
+  //  margin: 50px auto 0;
+  //  width: 8em;
+  //  height: 8em;
+  //  -webkit-background-size: contain;
+  //  background-size: contain;
+  //  vertical-align: middle;
+  //  background-repeat: no-repeat;
+  //  background-position: center;
+  //  background-color: transparent;
+  //}
+  //.#{$css-prefix}thumb.paper {
+  //  background-image: url("../img/icon-paper.png");
+  //}
+}

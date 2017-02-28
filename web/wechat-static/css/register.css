@@ -1,0 +1,9 @@
+.bc-list img {
+	height: 20px;
+}
+
+.get-code {
+	border-left: 1px solid #dcdcdc;
+	padding-left: 10px;
+	color: #b8c4cf;
+}

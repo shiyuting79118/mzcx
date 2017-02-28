@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+	<title>Mobiscroll</title>
+
+	<script src="../jquery/dist/jquery.min.js"></script>
+
+	<script src="mobiscroll-custom.js"></script>
+	<!-- or -->
+	<link rel="stylesheet" href="mobiscroll-custom.css"/>
+</head>
+<body>
+<!--demo start -->
+
+<input type="text" id="date" />
+<script>
+	$(function(){
+
+		$("#date").mobiscroll('destroy').mobiscroll({
+			theme: '',
+			mode: 'scroller',
+			lang: 'zh',
+			display: 'modal',
+			animate: 'fade',
+			preset: 'datetime',
+//			preset: 'datetime',
+//			dateOrder:'yy年mm月',
+//			dateFormat:'yy年mm月',
+			startYear: (new Date()).getFullYear() - 1,
+			endYear: (new Date()).getFullYear() + 1,
+			defaultVlaue:new Date(),
+			minDate: new Date(2012, 3, 10, 9, 22),
+			maxDate: new Date(2017, 7, 30, 15, 44),
+			stepMinute: 5,//每间隔5分钟选择
+			invalid: { daysOfWeek: [0, 6], daysOfMonth: ['5/1', '12/24', '12/25'] },//不可选时间
+//			defaultValue:new Date(2013,5,6,6,6),
+			onSelect:function(values,scroller){
+
+			//创建 Date 对象的语法：
+			//var myDate=new Date()
+			//Date 对象会自动把当前日期和时间保存为其初始值。
+			//参数形式有以下５种：
+			//
+			//new Date("month dd,yyyy hh:mm:ss");
+			//new Date("month dd,yyyy");
+			//new Date(yyyy,mth,dd,hh,mm,ss);
+			//new Date(yyyy,mth,dd);
+			//new Date(ms);
+
+				scroller.setDate(scroller.getDate(), true, 0.3, true, true);
+
+			}
+		})
+	})
+</script>
+
+<input id="my-input" type="text" />
+<ul id="tree_list">
+	<li data-val="999" data-text="USA">USA
+		<ul>
+			<li data-val="999">u1</li>
+			<li data-val="2">u2</li>
+			<li data-val="3">u3</li>
+			<li data-val="4">u4</li>
+		</ul>
+	</li>
+	<li data-val="usa">USA
+		<ul>
+			<li data-val="1">u1</li>
+			<li data-val="2">u2</li>
+			<li data-val="3">u3</li>
+			<li data-val="4">u4</li>
+		</ul>
+	</li>
+	<li data-val="Canada">Canada
+		<ul>
+			<li data-val="5">c1</li>
+			<li data-val="6">c2</li>
+			<li data-val="7">c3</li>
+			<li data-val="8">c4</li>
+		</ul>
+	</li>
+	<li data-val="Brazil"  data-text="默认值">默认值默认
+		<ul>
+			<li data-val="9">b1</li>
+			<li data-val="10"  data-text="默认值">默认值</li>
+			<li data-val="11">b3</li>
+			<li data-val="12">b4</li>
+		</ul>
+	</li>
+</ul>
+<script>
+	$(function(){
+
+		$("#tree_list").mobiscroll().treelist({
+			theme: '',
+			mode: 'scroller',
+			placeholder: 'scroller',
+			lang: 'zh',
+			display: 'modal',
+			preset : 'list',
+			defaultValue:['Brazil','10'],
+//			showLabel:true,
+			headerText:"<div style='overflow: hidden;zoom: 1;'><div style='width: 50%;float:left;'>地区</div><div style='float:left;width: 50%;'>地区</div></div>",
+//			minWidth:300,
+//			showLabel:false,
+
+			showInput:false,
+			onSelect:function(values,scroller){
+				$("#my-input").val(scroller.values)
+				var parent_li = $('#tree_list>li[data-val="'+scroller.values[0]+'"]')
+				var child_li = $('#tree_list>li>ul>li[data-val="'+scroller.values[1]+'"]')
+				console.info(parent_li.data('text'))
+				console.info(child_li.data('text'))
+
+			}
+
+		});
+
+		$("#my-input").on("click",function(){
+			$("#tree_list").mobiscroll('show')
+		})
+	})
+</script>
+</body>
+</html>
+

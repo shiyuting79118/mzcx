@@ -1,0 +1,114 @@
+// Specificity overrides
+
+.#{$css-prefix}btn {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid $border-color-base;
+  white-space: nowrap;
+  color: $text-color;
+  padding: 14px 10px;
+  line-height: 1;
+  border-radius: 6px;
+  @include user-select(none);
+  outline: 0;
+  background: #fafafa;
+  font-size: 16px;
+
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    @include opacity(.65);
+    @include box-shadow(none);
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+  }
+  &:active {
+    @include box-shadow(none);
+  }
+}
+
+.#{$css-prefix}btn-sm {
+  font-size: 80%;
+  padding: 8px;
+}
+
+@mixin component-btn($background-color,$border-color,$font-color) {
+
+  &, &:hover, &:visited, &:link {
+    background: $background-color;
+    color: $font-color;
+    border: 1px solid $border-color;
+
+    &:active {
+      background-color: darken($background-color, 5%);
+      border-color: darken($background-color, 5%);
+      @include box-shadow(none);
+    }
+  }
+  &.disabled,
+  &[disabled] {
+    //border: 1px solid $border-color;
+    //background: $background-color;
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+@mixin component-btn-outline($brand-color) {
+  &, &:hover, &:visited, &:link {
+    background-color: #fff;
+    border: 1px solid $brand-color;
+    color: $brand-color;
+    &:active {
+      @include box-shadow(none);
+      background-color: #f0f0f0;
+    }
+  }
+}
+
+.#{$css-prefix}btn-default {
+
+  //background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.5,#fff),to(#fafafa));
+  //@include component-btn(#fff, $border-color-base, $text-color);
+  &:active {
+    background: #f5f5f5;
+  }
+}
+
+.#{$css-prefix}btn-primary {
+  @include component-btn($brand-primary, $brand-primary, #fff);
+}
+
+.#{$css-prefix}btn-danger {
+  @include component-btn($brand-danger, $brand-danger, #fff);
+}
+
+.#{$css-prefix}btn-primary-outline {
+  @include component-btn-outline($brand-primary);
+}
+
+.#{$css-prefix}btn-danger-outline {
+  @include component-btn-outline($brand-danger);
+}
+
+.#{$css-prefix}btn-block {
+  display: block;
+  width: 100%;
+}
+
+.#{$css-prefix}btn-block + .#{$css-prefix}btn-block {
+  margin-top: 10px;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.#{$css-prefix}btn-block {
+    width: 100%;
+  }
+}

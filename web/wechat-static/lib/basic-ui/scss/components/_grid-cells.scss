@@ -1,0 +1,24 @@
+.#{$css-prefix}grid-cells {
+  overflow: hidden;
+  > li {
+    float: left;
+    display: table;
+    width: 25%;
+    border-collapse: collapse;
+    > a {
+      display: table-cell;
+      vertical-align: middle;
+      border-right: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+      padding: 15px 5px;
+      font-size: 12px;
+      height: 85px;
+      background: #fff;
+      > .#{$css-prefix}thumb {
+        /*height: 30px;*/
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.#{$css-prefix}mask {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: background .3s;
+  transition: background .3s;
+  z-index: 100;
+}
+
+.#{$css-prefix}mask-toggle {
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.#{$css-prefix}actionsheet {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  //-webkit-transform: translate(0, 100%);
+  //-ms-transform: translate(0, 100%);
+  //transform: translate(0, 100%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 101;
+  width: 100%;
+  background-color: #efeff4;
+  //-webkit-transition: -webkit-transform .3s;
+  //transition: transform .3s;
+  display: none;
+}
+
+.#{$css-prefix}actionsheet-animated {
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  display: block !important;
+}
+
+.#{$css-prefix}actionsheet.#{$css-prefix}actionsheet-toggle {
+  //-webkit-transform: translate(0, 0);
+  //-ms-transform: translate(0, 0);
+  //transform: translate(0, 0);
+  display: block;
+}
+
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+@-webkit-keyframes slideOutDown {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.slideOutDown {
+  -webkit-animation-name: slideOutDown;
+  animation-name: slideOutDown;
+}
+
+.test-toggle {
+  display: block !important;
+}

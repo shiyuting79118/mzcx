@@ -1,0 +1,12 @@
+.#{$css-prefix}reddot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  background-color: #f74c31;
+  border-radius: 5px;
+  right: -3px;
+  top: -3px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}

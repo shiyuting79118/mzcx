@@ -1,0 +1,52 @@
+.#{$css-prefix}nav-bar {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 15px;
+  height: 40px;
+  line-height: 40px;
+  li {
+    -webkit-box-flex: 1;
+    //color: #666;
+    display: block;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    text-align: center;
+    width: 1%;
+    a {
+      -webkit-box-align: center;
+      -webkit-box-flex: 1;
+      -webkit-box-pack: center;
+      display: -webkit-box;
+      text-decoration: none;
+      color: inherit;
+    }
+    a:after {
+      background: #e6e6e6;
+      bottom: 13px;
+      content: "";
+      display: block;
+      left: -1px;
+      overflow: hidden;
+      position: absolute;
+      top: 13px;
+      width: 1px;
+      -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+      transform-origin: 0 100%;
+      -webkit-transform: scaleX(0.5);
+      -ms-transform: scaleX(0.5);
+      transform: scaleX(0.5);
+    }
+
+  }
+
+  li.active {
+    color: $brand-danger;
+  }
+}

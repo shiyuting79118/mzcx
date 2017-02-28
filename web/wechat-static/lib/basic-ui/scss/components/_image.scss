@@ -1,0 +1,9 @@
+img{
+  vertical-align: middle;
+  border: 0;
+}
+
+.#{$css-prefix}img-circle {
+  border-radius: 50%;
+  display: block;
+}

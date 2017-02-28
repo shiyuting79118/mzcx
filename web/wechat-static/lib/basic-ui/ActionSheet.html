@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/basic-ui.css"/>
+    <script src="../jquery/dist/jquery.min.js"></script>
+    <script src="js/basic-ui.js"></script>
+
+</head>
+<body>
+
+<div class="bc-header">
+    <a class="bc-header-action" href="demo.html"><i class="fa fa-chevron-left"></i></a>
+    <div class="bc-header-title">消息</div>
+</div>
+<div class="bc-margin">
+    <button class="bc-btn bc-btn-primary bc-btn-block" onclick='comui.actionSheet("#js-demo","show")'>
+        ActionSheet
+    </button>
+</div>
+<div id="js-demo" class="bc-actionsheet">
+    <ul class="bc-list">
+        <li class="bc-item has-touch js-btn">按钮</li>
+        <li class="bc-item has-touch js-btn">按钮</li>
+        <li class="bc-item has-touch js-btn">按钮</li>
+        <li class="bc-item has-touch js-btn">按钮</li>
+    </ul>
+    <div class="bc-list-head"></div>
+    <ul class="bc-list">
+        <li class="bc-item bc-item-flex bc-touch bc-actionsheet-cancel">取消</li>
+    </ul>
+</div>
+<script>
+    $(".js-btn").click(function () {
+        //todo something
+        BC_JS.actionSheet("#js-demo", "close");
+    });
+</script>
+</body>
+</html>

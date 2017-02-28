@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/basic-ui.css"/>
+
+    <link rel="stylesheet" href="../../../static/animatecss/animate.min.css"/>
+    <script src="../jquery/dist/jquery.min.js"></script>
+    <script src="js/basic-ui.js"></script>
+
+    <style>
+        #js-test1 {
+            position: fixed;
+            width: 100px;
+            height: 60px;
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -30px;
+            background: #fff;
+            display: none;
+            z-index: 110;
+        }
+
+        #js-test2 {
+            position: fixed;
+            background: #fff;
+            display: none;
+            z-index: 110;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            width: 200px;
+        }
+
+        .block {
+            display: block!important;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bc-header">
+    <a class="bc-header-action" href="demo.html"><i class="fa fa-chevron-left"></i></a>
+    <div class="bc-header-title">消息</div>
+</div>
+<div class="bc-margin">
+    <button class="bc-btn bc-btn-primary bc-btn-block" onclick="test1()">test1</button>
+    <button class="bc-btn bc-btn-primary bc-btn-block" onclick="test2()">test2</button>
+</div>
+<!-- test1 -->
+
+<div id="js-test1">111</div>
+
+<script>
+    var ac1 = BC_JS.animateDiv("#js-test1", {
+        animateInClass: "rubberBand",
+        animateOutClass: "tada",
+        activeClass: "block"
+    });
+    function test1() {
+        ac1.show();
+    }
+
+</script>
+
+<div id="js-test2">111</div>
+<script>
+    var ac2 = BC_JS.animateDiv("#js-test2", {
+        animateInClass: "slideInLeft",
+        animateOutClass: "slideOutLeft",
+        activeClass: "block"
+    });
+    function test2() {
+        ac2.show();
+    }
+</script>
+</body>
+</html>

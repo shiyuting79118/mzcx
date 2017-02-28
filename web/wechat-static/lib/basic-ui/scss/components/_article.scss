@@ -1,0 +1,39 @@
+.#{$css-prefix}article {
+  padding: 10px 10px 15px;
+  background-color: #fff;
+
+  > .#{$css-prefix}title {
+    margin-bottom: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  > .#{$css-prefix}time,
+  > .#{$css-prefix}author {
+    color: $text-muted;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 8px 28px 0;
+    text-decoration: none;
+  }
+  > .#{$css-prefix}content {
+    //    color: #3e3e3e;
+    font-size: 16px;
+    word-wrap: break-word;
+    line-height: 1.6;
+    clear: both;
+    font-size: 15px;
+
+    img {
+      margin: 0;
+    }
+    * {
+      max-width: 100% !important;
+    }
+  }
+  p {
+    margin-top: 0;
+  }
+}
